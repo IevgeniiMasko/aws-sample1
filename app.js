@@ -18,10 +18,6 @@ app.get('/products', (req, res) => {
       productId: '102',
       price: 150,
     },
-    {
-      productId: '103',
-      price: 160,
-    },
   ]);
 });
 
