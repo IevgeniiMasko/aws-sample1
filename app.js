@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var os = require('os');
 const port = 3000;
 
 app.get('/', (req, res) => {
@@ -23,6 +24,10 @@ app.get('/products', (req, res) => {
       price: 160,
     },
   ]);
+});
+
+app.get('/hostname', (req, res) => {
+  return res.send(os.hostname());
 });
 
 app.listen(port, () => {
