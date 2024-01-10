@@ -27,7 +27,7 @@ app.get('/products', (req, res) => {
 });
 
 app.get('/hostname', (req, res) => {
-  return res.send(os.hostname());
+  return res.send({ hostname: os.hostname() });
 });
 
 app.listen(port, () => {
